@@ -1,12 +1,8 @@
 import { useState } from 'react'
 import { random } from 'lodash'
 import type { MouseEventHandler } from 'react'
+import type { Fox } from './types/Fox'
 import RandomFox from './components/RandomFox'
-
-type Fox = {
-	src: string
-	alt: string
-}
 
 function App() {
 	const [foxes, setFoxes] = useState<Fox[]>([])
@@ -24,7 +20,7 @@ function App() {
 
 	return (
 		<main className='w-full grid place-items-center gap-10'>
-			<h1 className='text-2xl font-bold md:text-5xl'>Random Fox Generator</h1>
+			<h1 className='text-2xl font-bold m-8 md:text-5xl'>Random Fox Generator</h1>
 
 			<button onClick={addNewFox} className='bg-blue-700 rounded-3xl p-2'>
 				Generate a new Fox
